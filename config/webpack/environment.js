@@ -1,0 +1,1 @@
+environment.loaders.get('vue').options.extractCSS = false
