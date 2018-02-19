@@ -1,6 +1,7 @@
 <template>
 	<div>
 
+		<!-- 新規作成 -->
 		<div class="row">
 			<div class="col s10 m11">
 				<input v-model="newTask" class="form-control" placeholder="Add your task">
@@ -12,6 +13,7 @@
 			</div>
 		</div>
 
+		<!-- リスト -->
 		<div>
 			<ul class="collection">
 				<li v-for="task in tasks" v-if="!task.is_done" v-bind:id="'row_task_' + task.id" class="collection-item">
@@ -21,8 +23,10 @@
 			</ul>
 		</div>
 
+		<!-- 完了済み表示 -->
 		<div class="btn" v-on:click="displayFinishedTasks">Display finished tasks</div>
 
+		<!-- 完了済み一覧 -->
 		<div id="finished-tasks" class="display_none">
 			<ul class="collection">
 				<li v-for="task in tasks" v-if="task.is_done"v-bind:id="'row_task_' + task.id" class="collection-item">
