@@ -33,9 +33,17 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use gem
+# web start
 gem 'webpacker', '~> 2.0'
 gem 'foreman'
+
+# js
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+
+# css
+gem 'materialize-sass'
+gem 'material_icons'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
